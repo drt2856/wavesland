@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
+import "./style.css";
 
 function Header({ title, sections }) {
   return (
-    <header>
+    <header className="header">
       <h1>{title}</h1>
-      <nav>
+      <nav className="my-nav">
         <ul>
           {sections &&
             sections.map((section) => (

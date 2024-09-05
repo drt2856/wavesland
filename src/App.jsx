@@ -1,11 +1,44 @@
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import About from "./components/About/About";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+import Menu from "./components/menu/Menu";
+import Reserves from "./components/reserves/Reserves";
+import n404 from "./assets/404.jpg";
+import FlexGalery from "./components/flex_galery/FlexGalery";
+import Contact from "./components/contact/Contact";
+import Qr from "./components/qr/Qr";
+import FeaturedProducts from "./components/featured _products/FeaturedProducts";
+const reservas = [
+  {
+    title: "Carne asada",
+    image: "fdsfsd",
+    description: "la mejor carne asada del mundo mi loco",
+  },
+  {
+    title: "Ropa Vieja",
+    description:
+      "Carne deshebrada en salsa de tomate con especias cubanas.sd Disfrutas",
+  },
+  {
+    title: "Carne asada",
+    image: "fdsfsd",
+    description: "la mejor carne asada del mundo mi loco",
+  },
+  {
+    title: "Carne asada",
+    image: "fdsfsd",
+    description: "la mejor carne asada del mundo mi loco",
+  },
+];
 
 function App() {
   return (
     <>
-      <Header title="WavesLand" sections={["Menú", "Reservas", "Contacto"]} />
+      <Header
+        title="WavesLand"
+        sections={["Menú", "Reservas", "Contacto", "Otro", "Otro mas"]}
+      />
 
       <Hero
         title={"¡Bienvenidos a la auténtica comida cubana!"}
@@ -13,41 +46,56 @@ function App() {
         textButton={{ text: "Reserva tu mesa", section: "reservas" }}
       />
 
-      <section id="menú">
-        <h2>Nuestro Menú</h2>
-        <div className="dish">
-          <h3>Ropa Vieja</h3>
-          <p>Carne deshebrada en salsa de tomate con especias cubanas.</p>
+      <main className="row center" style={{ backgroundColor: "#eee" }}>
+        <div className="col-12 col-sm-8 pt-3 ">
+          <About
+            image={n404}
+            title={"Lo mejore de lo mejor"}
+            text={
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam tenetur ex voluptatem quod esse tempore, dignissimos dolore, veniam nemout doloremque. Harum sapiente modi magni officia labore perspiciatiscorporis. Dolorem temporibus recusandae optio placeat eos quam vero exporro incidunt rem debitis perferendis, dignissimos repellendus ipsaquaerat eius, autem voluptatibus veniam, doloremque animi? Fuga voluptatemobcaecati quibusdam nam corporis"
+            }
+          />
+          <Menu title="Jama de hoy" items={reservas} />
+          <FeaturedProducts />
+          <FlexGalery
+            title="Galería"
+            images={[
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+              { src: n404, alt: "1" },
+            ]}
+          />
+          <Reserves />
         </div>
-        <div className="dish">
-          <h3>Arroz con Pollo</h3>
-          <p>Arroz amarillo con pollo, guisantes y pimientos.</p>
+
+        <div className="col-12 col-sm-3 pt-3">
+          <Contact />
+          <Qr
+            title={"Escanee aqui"}
+            value={"Te aconsejo poner tiu direccion web aqui"}
+          />
+
+          <section id="localitation" className="card">
+            <h3>Localización</h3>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1EyCYuRAA2aKhz9zCf4rkebl-iAs&ehbc=2E312F"
+              className="col-12"
+              height="480"
+            ></iframe>
+            <p>Entre primera y cetenta, donde va a ser si no</p>
+          </section>
         </div>
-        <div className="dish">
-          <h3>Tostones</h3>
-          <p>Plátanos fritos, crujientes y deliciosos.</p>
-        </div>
-      </section>
-
-      <section id="reservas">
-        <h2>Haz tu Reserva</h2>
-        <form action="#" method="post">
-          <label htmlFor="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label htmlFor="fecha">Fecha:</label>
-          <input type="date" id="fecha" name="fecha" required />
-
-          <label htmlFor="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required />
-
-          <label htmlFor="personas">Número de Personas:</label>
-          <input type="number" id="personas" name="personas" required />
-
-          <button type="submit">Reservar</button>
-        </form>
-      </section>
-
+      </main>
       <footer id="contacto">
         <h2>Contacto</h2>
         <p>Email: info@restaurantecubano.com</p>

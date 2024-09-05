@@ -1,0 +1,9 @@
+#hero {
+  background-image: var(
+    --url-hero
+  ); /* Cambia esta URL por una imagen relevante */
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
