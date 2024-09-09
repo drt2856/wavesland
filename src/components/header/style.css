@@ -2,6 +2,9 @@
   background-color: var(--primary-color);
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .my-nav ul {
@@ -11,10 +14,16 @@
 
 .my-nav ul li {
   display: inline-flex;
-  margin: 0 15px;
+  margin: 15px;
 }
 
 .my-nav a {
   text-decoration: none;
   color: #333;
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    display: inline-block;
+  }
 }

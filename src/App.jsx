@@ -12,41 +12,17 @@ import FeaturedProducts from "./components/featured _products/FeaturedProducts";
 import Localitation from "./components/localitation/Localitation";
 import Slice from "./components/slice/Slice";
 import Table from "./components/table/Table";
-const reservas = [
-  {
-    title: "Carne asada",
-    image: "fdsfsd",
-    description: "la mejor carne asada del mundo mi loco",
-  },
-  {
-    title: "Ropa Vieja",
-    description:
-      "Carne deshebrada en salsa de tomate con especias cubanas.sd Disfrutas",
-  },
-  {
-    title: "Carne asada",
-    image: "fdsfsd",
-    description: "la mejor carne asada del mundo mi loco",
-  },
-  {
-    title: "Carne asada",
-    image: "fdsfsd",
-    description: "la mejor carne asada del mundo mi loco",
-  },
-];
+import { header, hero, menu } from "./utils/var";
 
 function App() {
   return (
     <>
-      <Header
-        title="WavesLand"
-        sections={["Menú", "Reservas", "Contacto", "Otro", "Otro mas"]}
-      />
+      <Header title={header.title} sections={header.sections} />
 
       <Hero
-        title={"¡Bienvenidos a la auténtica comida cubana!"}
-        subTitle={"Disfruta de los sabores de Cuba en cada bocado."}
-        textButton={{ text: "Reserva tu mesa", section: "reservas" }}
+        title={hero.title}
+        subTitle={hero.subTitle}
+        textButton={hero.textButton}
       />
 
       <main className="row center" style={{ backgroundColor: "#eee" }}>
@@ -58,7 +34,7 @@ function App() {
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam tenetur ex voluptatem quod esse tempore, dignissimos dolore, veniam nemout doloremque. Harum sapiente modi magni officia labore perspiciatiscorporis. Dolorem temporibus recusandae optio placeat eos quam vero exporro incidunt rem debitis perferendis, dignissimos repellendus ipsaquaerat eius, autem voluptatibus veniam, doloremque animi? Fuga voluptatemobcaecati quibusdam nam corporis"
             }
           />
-          <Menu title="Jama de hoy" items={reservas} />
+          <Menu title={menu.title} items={menu.menu} />
           <FeaturedProducts />
           <FlexGalery
             title="Galería"
