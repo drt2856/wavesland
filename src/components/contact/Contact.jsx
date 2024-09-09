@@ -5,7 +5,7 @@ export default function Contact({ address, emails, phones }) {
   return (
     <section id="contact" className="card mb-2">
       <h3>Contactos</h3>
-      {address && <div>{address}Av. 60 No. 3104, Cienfuegos</div>}
+      {address && <div>Dir: {address}</div>}
       {phones &&
         phones.map((phone) => (
           <a key={phone} className="nav-link" href={"tel:" + phone}>

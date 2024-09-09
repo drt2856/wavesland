@@ -46,9 +46,9 @@ export default function FeaturedProducts({ products = plans }) {
           <div
             style={{ borderRadius: radius }}
             key={product.name}
-            className={`col-${
+            className={`col-sm-${
               product.active ? 4 : 3
-            } border border-primary  m-1 px-0`}
+            } border border-primary  m-1 px-0 col-12`}
           >
             <header
               className={`h3 py-5 fw-bolder text-center  ${

@@ -9,6 +9,8 @@ import FlexGalery from "./components/flex_galery/FlexGalery";
 import Contact from "./components/contact/Contact";
 import Qr from "./components/qr/Qr";
 import FeaturedProducts from "./components/featured _products/FeaturedProducts";
+import Localitation from "./components/localitation/Localitation";
+import Slice from "./components/slice/Slice";
 const reservas = [
   {
     title: "Carne asada",
@@ -75,25 +77,26 @@ function App() {
               { src: n404, alt: "1" },
             ]}
           />
+          <Slice />
+
           <Reserves />
         </div>
 
         <div className="col-12 col-sm-3 pt-3">
-          <Contact />
+          <Contact
+            phones={["+53 56605908", "+53 56605908"]}
+            address="calle #24 Cabañas, Mariel, Artemisa"
+            emails={["drt2856@gmail.com"]}
+          />
+          <Localitation
+            title="Localización"
+            subtitle={"Donde te creías si no"}
+            src="https://www.google.com/maps/d/embed?mid=1EyCYuRAA2aKhz9zCf4rkebl-iAs&ehbc=2E312F"
+          />
           <Qr
             title={"Escanee aqui"}
             value={"Te aconsejo poner tiu direccion web aqui"}
           />
-
-          <section id="localitation" className="card">
-            <h3>Localización</h3>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1EyCYuRAA2aKhz9zCf4rkebl-iAs&ehbc=2E312F"
-              className="col-12"
-              height="480"
-            ></iframe>
-            <p>Entre primera y cetenta, donde va a ser si no</p>
-          </section>
         </div>
       </main>
       <footer id="contacto">

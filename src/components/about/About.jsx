@@ -13,7 +13,7 @@ export default function About({ image, title, text }) {
         />
       )}
       <div className="card-body">
-        {title && <h5 className="card-title mx-5 h1">{title}</h5>}
+        {title && <h5 className="card-title text-center h1">{title}</h5>}
 
         <p className="card-text m-5">{text}</p>
       </div>
