@@ -1,3 +1,5 @@
+import n404 from "../assets/404.jpg";
+
 export const menu = {
   title: "Jama de hoy",
   menu: [
@@ -26,7 +28,36 @@ export const hero = {
 };
 
 export const about = {
-  title: "¡Bienvenidos a la auténtica comida cubana!",
-  subTitle: "Disfruta de los sabores de Cuba en cada bocado.",
-  textButton: { text: "Reserva tu mesa", section: "reservas" },
+  image: { n404 },
+  title: "Lo mejore de lo mejor",
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam tenetur ex voluptatem quod esse tempore, dignissimos dolore, veniam nemout doloremque. Harum sapiente modi magni officia labore perspiciatiscorporis. Dolorem temporibus recusandae optio placeat eos quam vero exporro incidunt rem debitis perferendis, dignissimos repellendus ipsaquaerat eius, autem voluptatibus veniam, doloremque animi? Fuga voluptatemobcaecati quibusdam nam corporis",
+};
+
+export const galery = {
+  title: "Galería",
+  images: [
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+    { src: n404, alt: "1" },
+  ],
+};
+
+export const table = {
+  title: "Todos nuestros productos",
+  headers: ["Producto", "Precio"],
+  data: [
+    { nombre: "Aguacate", precio: "1.20" },
+    { nombre: "Aguacate", precio: "1.20" },
+    { nombre: "Aguacate", precio: "1.20" },
+  ],
 };

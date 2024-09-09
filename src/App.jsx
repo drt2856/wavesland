@@ -4,7 +4,6 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Menu from "./components/menu/Menu";
 import Reserves from "./components/reserves/Reserves";
-import n404 from "./assets/404.jpg";
 import FlexGalery from "./components/flex_galery/FlexGalery";
 import Contact from "./components/contact/Contact";
 import Qr from "./components/qr/Qr";
@@ -12,7 +11,7 @@ import FeaturedProducts from "./components/featured _products/FeaturedProducts";
 import Localitation from "./components/localitation/Localitation";
 import Slice from "./components/slice/Slice";
 import Table from "./components/table/Table";
-import { header, hero, menu } from "./utils/var";
+import { about, galery, header, hero, menu, table } from "./utils/var";
 
 function App() {
   return (
@@ -27,42 +26,19 @@ function App() {
 
       <main className="row center" style={{ backgroundColor: "#eee" }}>
         <div className="col-12 col-sm-8 pt-3 ">
-          <About
-            image={n404}
-            title={"Lo mejore de lo mejor"}
-            text={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quisquam tenetur ex voluptatem quod esse tempore, dignissimos dolore, veniam nemout doloremque. Harum sapiente modi magni officia labore perspiciatiscorporis. Dolorem temporibus recusandae optio placeat eos quam vero exporro incidunt rem debitis perferendis, dignissimos repellendus ipsaquaerat eius, autem voluptatibus veniam, doloremque animi? Fuga voluptatemobcaecati quibusdam nam corporis"
-            }
-          />
+          <About image={about.image} title={about.title} text={about.text} />
+
           <Menu title={menu.title} items={menu.menu} />
+
           <FeaturedProducts />
-          <FlexGalery
-            title="Galería"
-            images={[
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-              { src: n404, alt: "1" },
-            ]}
-          />
+
+          <FlexGalery title={galery.title} images={galery.images} />
+
           <Slice />
           <Table
-            title={"Todos nuestros productos"}
-            headers={["Producto", "Precio"]}
-            data={[
-              { nombre: "Aguacate", precio: "1.20" },
-              { nombre: "Aguacate", precio: "1.20" },
-              { nombre: "Aguacate", precio: "1.20" },
-            ]}
+            title={table.title}
+            headers={table.headers}
+            data={table.data}
           />
 
           <Reserves />
