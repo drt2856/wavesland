@@ -11,6 +11,7 @@ import Qr from "./components/qr/Qr";
 import FeaturedProducts from "./components/featured _products/FeaturedProducts";
 import Localitation from "./components/localitation/Localitation";
 import Slice from "./components/slice/Slice";
+import Table from "./components/table/Table";
 const reservas = [
   {
     title: "Carne asada",
@@ -78,6 +79,15 @@ function App() {
             ]}
           />
           <Slice />
+          <Table
+            title={"Todos nuestros productos"}
+            headers={["Producto", "Precio"]}
+            data={[
+              { nombre: "Aguacate", precio: "1.20" },
+              { nombre: "Aguacate", precio: "1.20" },
+              { nombre: "Aguacate", precio: "1.20" },
+            ]}
+          />
 
           <Reserves />
         </div>
