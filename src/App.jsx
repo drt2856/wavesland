@@ -11,7 +11,21 @@ import FeaturedProducts from "./components/featured _products/FeaturedProducts";
 import Localitation from "./components/localitation/Localitation";
 import Slice from "./components/slice/Slice";
 import Table from "./components/table/Table";
-import { about, galery, header, hero, menu, table } from "./utils/var";
+import {
+  about,
+  accordion,
+  carousel,
+  contact,
+  galery,
+  header,
+  hero,
+  location,
+  menu,
+  qr,
+  table,
+} from "./utils/var";
+import Accordion from "./components/accordion/Accordion";
+import EmailForm from "./components/email_form/EmailForm";
 
 function App() {
   return (
@@ -24,8 +38,8 @@ function App() {
         textButton={hero.textButton}
       />
 
-      <main className="row center" style={{ backgroundColor: "#eee" }}>
-        <div className="col-12 col-sm-8 pt-3 ">
+      <div className="row center" style={{ backgroundColor: "#eee" }}>
+        <main className="col-12 col-sm-8 pt-3 ">
           <About image={about.image} title={about.title} text={about.text} />
 
           <Menu title={menu.title} items={menu.menu} />
@@ -34,33 +48,32 @@ function App() {
 
           <FlexGalery title={galery.title} images={galery.images} />
 
-          <Slice />
+          <Slice images={carousel.images} />
           <Table
             title={table.title}
             headers={table.headers}
             data={table.data}
           />
+          <Accordion items={accordion.items} />
 
           <Reserves />
-        </div>
+          <EmailForm />
+        </main>
 
-        <div className="col-12 col-sm-3 pt-3">
+        <aside className="col-12 col-sm-3 pt-3">
           <Contact
-            phones={["+53 56605908", "+53 56605908"]}
-            address="calle #24 Cabañas, Mariel, Artemisa"
-            emails={["drt2856@gmail.com"]}
+            phones={contact.phones}
+            address={contact.address}
+            emails={contact.emails}
           />
           <Localitation
-            title="Localización"
-            subtitle={"Donde te creías si no"}
-            src="https://www.google.com/maps/d/embed?mid=1EyCYuRAA2aKhz9zCf4rkebl-iAs&ehbc=2E312F"
+            title={location.title}
+            subtitle={location.subtitle}
+            src={location.src}
           />
-          <Qr
-            title={"Escanee aqui"}
-            value={"Te aconsejo poner tiu direccion web aqui"}
-          />
-        </div>
-      </main>
+          <Qr title={qr.title} value={qr.value} />
+        </aside>
+      </div>
       <footer id="contacto">
         <h2>Contacto</h2>
         <p>Email: info@restaurantecubano.com</p>
