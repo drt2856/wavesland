@@ -26,6 +26,7 @@ import {
 } from "./utils/var";
 import Accordion from "./components/accordion/Accordion";
 import EmailForm from "./components/email_form/EmailForm";
+import ImageGallery from "./components/useChargeAllFiles";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
 
           <Reserves />
           <EmailForm />
+          <ImageGallery />
         </main>
 
         <aside className="col-12 col-sm-3 pt-3">
