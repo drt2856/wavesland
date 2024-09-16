@@ -1,1 +1,0 @@
-const s="/assets/res1-DvqODbGo.jfif";export{s as default};
