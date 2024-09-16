@@ -26,7 +26,7 @@ import {
 } from "./utils/var";
 import Accordion from "./components/accordion/Accordion";
 import EmailForm from "./components/email_form/EmailForm";
-import ImageGallery from "./components/useChargeAllFiles";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -43,13 +43,13 @@ function App() {
         <main className="col-12 col-sm-8 pt-3 ">
           <About image={about.image} title={about.title} text={about.text} />
 
-          <Menu title={menu.title} items={menu.menu} />
+          <Menu title={menu.title} items={menu.menu} folder={menu.folder} />
 
           <FeaturedProducts />
 
-          <FlexGalery title={galery.title} images={galery.images} />
+          <FlexGalery title={galery.title} folder="gallery" />
 
-          <Slice images={carousel.images} />
+          <Slice folder="gallery" />
           <Table
             title={table.title}
             headers={table.headers}
@@ -59,7 +59,6 @@ function App() {
 
           <Reserves />
           <EmailForm />
-          <ImageGallery />
         </main>
 
         <aside className="col-12 col-sm-3 pt-3">
@@ -76,12 +75,7 @@ function App() {
           <Qr title={qr.title} value={qr.value} />
         </aside>
       </div>
-      <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: info@restaurantecubano.com</p>
-        <p>Teléfono: +123 456 7890</p>
-        <p>Dirección: Calle de la Comida Cubana, Habana, Cuba</p>
-      </footer>
+      <Footer />
     </>
   );
 }

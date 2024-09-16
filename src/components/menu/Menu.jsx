@@ -2,8 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import imganeg from "../../assets/404.jpg";
 import "./style.css";
+import { useGetAllImagesFromFolder } from "../../hooks/useGetAllImagesFromFolder";
 
-export default function Menu({ title, items }) {
+export default function Menu({ title, items, folder }) {
+  const images = useGetAllImagesFromFolder(folder);
+
+  function getImage(image) {
+    const src = images.filter((src) => src.includes(image));
+    return src;
+  }
+
   return (
     <section id="menú" className="card">
       <h2>{title}</h2>
@@ -15,7 +23,7 @@ export default function Menu({ title, items }) {
                 <div className="row g-0">
                   <div className="col-sm-4">
                     <img
-                      src={item.image ? item.image : imganeg}
+                      src={images.length > 0 ? getImage(item.image) : imganeg}
                       alt={item.title}
                       className="card-img-top"
                     />
@@ -38,5 +46,6 @@ export default function Menu({ title, items }) {
 
 Menu.propTypes = {
   title: PropTypes.string.isRequired,
+  folder: PropTypes.string,
   items: PropTypes.array.isRequired,
 };

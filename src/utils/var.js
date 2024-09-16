@@ -13,14 +13,16 @@ export const about = {
 
 export const menu = {
   title: "Jama de hoy",
+  folder: "menu",
   menu: [
     {
-      title: "Carne asada",
-      image: "fdsfsd",
+      title: "Jamón",
+      image: "jamon.jpg",
       description: "la mejor carne asada del mundo mi loco",
     },
     {
       title: "Ropa Vieja",
+      image: "cervez cristal.jpg",
       description:
         "Carne deshebrada en salsa de tomate con especias cubanas.sd Disfrutas",
     },
@@ -35,21 +37,7 @@ export const hero = {
 
 export const galery = {
   title: "Galería",
-  images: [
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-    { src: n404, alt: "1" },
-  ],
+  folder: "galery",
 };
 
 export const table = {
