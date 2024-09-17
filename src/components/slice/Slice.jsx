@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import "./style.css";
-import { useGetAllImagesFromFolder } from "../../hooks/useGetAllImagesFromFolder";
-export default function Slice({ folder }) {
+export default function Slice({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const images = useGetAllImagesFromFolder(folder);
 
   useEffect(() => {
     if (!isHovered) {
@@ -50,5 +48,5 @@ export default function Slice({ folder }) {
   );
 }
 Slice.propTypes = {
-  folder: PropTypes.string.isRequired,
+  images: PropTypes.array.isRequired,
 };

@@ -1,8 +1,20 @@
 import n404 from "../assets/404.jpg";
+//import from gallery
+import g1 from "../assets/gallery/1.jpg";
+import g2 from "../assets/gallery/2.jpg";
+import g3 from "../assets/gallery/3.jpg";
+import g4 from "../assets/gallery/4.jpg";
+import g5 from "../assets/gallery/5.jpg";
+import g6 from "../assets/gallery/6.jpg";
+import g7 from "../assets/gallery/7.jpg";
+import g8 from "../assets/gallery/8.jpg";
+import g9 from "../assets/gallery/9.jpg";
+import g10 from "../assets/gallery/10.jpg";
+import g11 from "../assets/gallery/11.jpg";
 
 export const header = {
   title: "WavesLand",
-  sections: ["Menú", "Reservas", "Contacto", "Otro", "Otro mas"],
+  sections: ["Sombre nosotros", "Planes", "Contacto", "Otro", "Otro mas"],
 };
 
 export const about = {
@@ -30,14 +42,14 @@ export const menu = {
 };
 
 export const hero = {
-  title: "¡Bienvenidos a la auténtica comida cubana!",
-  subTitle: "Disfruta de los sabores de Cuba en cada bocado.",
-  textButton: { text: "Reserva tu mesa", section: "reservas" },
+  title: "¡Date a conocer con Wavesland!",
+  subTitle: "Obtenga facilmente su web profesional",
+  textButton: { text: "Contactanos", section: "Contacto" },
 };
 
 export const galery = {
   title: "Galería",
-  folder: "galery",
+  images: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11],
 };
 
 export const table = {
@@ -51,7 +63,7 @@ export const table = {
 };
 
 export const contact = {
-  phones: ["+53 56605908", "+53 56605908"],
+  phones: ["+53 56605908", "+53 56605918"],
   address: "calle #24 Cabañas, Mariel, Artemisa",
   emails: ["drt2856@gmail.com"],
 };
@@ -87,3 +99,40 @@ export const accordion = {
     },
   ],
 };
+
+export const plans = [
+  {
+    name: "Básico",
+    slogan: "Ideal para negocios pequeños",
+    price: "1000 CUP",
+    characteristics: [
+      "Estilo de columna",
+      "Hasta 3 módulos extra",
+      "Elección de estilos y colores base",
+    ],
+  },
+  {
+    name: "Profesional",
+    slogan: "Ideal para negocios pequeños",
+    price: "1500 CUP",
+    active: true,
+    characteristics: [
+      "Estilo de 2 columnas",
+      "Todos los módulos disponibles",
+      "Elección de estilos y colores base",
+      "Gestionar productos en tiempo real",
+      "Modulo especial de Reservas por correo",
+      "Formulario personalizable",
+    ],
+  },
+  {
+    name: "Estandar",
+    slogan: "El más popular",
+    price: "1200 CUP",
+    characteristics: [
+      "Estilo de 2 columnas",
+      "Hasta 5 módulos extra",
+      "Elección de estilos y colores base",
+    ],
+  },
+];

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import { send } from "emailjs-com";
 
 export default function EmailForm() {
   const [formData, setFormData] = useState({
@@ -29,20 +29,18 @@ export default function EmailForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
+    send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID").then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
   };
 
   return (
-    <section className="card">
+    <section id="contacto" className="card">
       <form onSubmit={handleSubmit}>
         <label htmlFor="yourName">Tu nombre:</label>
         <input

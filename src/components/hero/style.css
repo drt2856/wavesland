@@ -1,7 +1,5 @@
 #hero {
-  background-image: var(
-    --url-hero
-  ); /* Cambia esta URL por una imagen relevante */
+  background-image: var(--url-hero);
   background-size: cover;
   color: white;
   text-align: center;

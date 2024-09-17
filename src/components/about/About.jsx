@@ -24,5 +24,5 @@ export default function About({ image, title, text }) {
 About.propTypes = {
   text: PropTypes.string.isRequired,
   title: PropTypes.string,
-  image: PropTypes.object,
+  image: PropTypes.string,
 };

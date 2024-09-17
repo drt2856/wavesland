@@ -1,23 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./style.css";
-import { useGetAllImagesFromFolder } from "../../hooks/useGetAllImagesFromFolder";
-
-export default function FlexGalery({ title, folder, dimentions }) {
-  const images = useGetAllImagesFromFolder(folder);
+export default function FlexGalery({ title, images, dimensions }) {
   return (
     <section className="card">
       <h2>{title}</h2>
       <ul className="flex-galery">
         {images &&
-          images.map((image) => (
-            <li key={image} className="m-1 " width={"100%"}>
+          images.map((image, index) => (
+            <li key={index} className="m-1">
               <img
                 src={image}
-                alt={"image from gallery"}
                 style={{
-                  width: dimentions?.width && dimentions.width,
-                  height: dimentions?.height && dimentions.height,
+                  width: dimensions?.width || 300,
+                  height: dimensions?.height || "auto",
                 }}
               />
             </li>
@@ -26,8 +22,9 @@ export default function FlexGalery({ title, folder, dimentions }) {
     </section>
   );
 }
+
 FlexGalery.propTypes = {
-  folder: PropTypes.string.isRequired,
+  images: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  dimentions: PropTypes.object,
+  dimensions: PropTypes.object,
 };
