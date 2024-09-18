@@ -3,7 +3,6 @@ import About from "./components/About/About";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Menu from "./components/menu/Menu";
-import Reserves from "./components/reserves/Reserves";
 import FlexGalery from "./components/flex_galery/FlexGalery";
 import Contact from "./components/contact/Contact";
 import Qr from "./components/qr/Qr";
@@ -32,7 +31,11 @@ import Plans from "./components/plans/Plans";
 function App() {
   return (
     <>
-      <Header title={header.title} sections={header.sections} />
+      <Header
+        title={header.title}
+        sections={header.sections}
+        logo={header.logo}
+      />
 
       <Hero
         title={hero.title}
@@ -44,21 +47,20 @@ function App() {
         <main className="col-12 col-sm-8 pt-3 ">
           <About image={about.image} title={about.title} text={about.text} />
 
-          <Menu title={menu.title} items={menu.menu} />
+          {/* <Menu title={menu.title} items={menu.menu} /> */}
 
           <Plans plans={plans} />
 
-          <FlexGalery title={galery.title} images={galery.images} />
+          {/* <FlexGalery title={galery.title} images={galery.images} /> */}
 
-          <Slice folder="gallery" images={galery.images} />
-          <Table
+          {/* <Slice folder="gallery" images={galery.images} /> */}
+          {/* <Table
             title={table.title}
             headers={table.headers}
             data={table.data}
-          />
-          <Accordion items={accordion.items} />
+          /> */}
+          <Accordion items={accordion.items} title={accordion.title} />
 
-          <Reserves />
           <EmailForm />
         </main>
 

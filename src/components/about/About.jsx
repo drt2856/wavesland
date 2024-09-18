@@ -13,9 +13,9 @@ export default function About({ image, title, text }) {
         />
       )}
       <div className="card-body">
-        {title && <h5 className="card-title text-center h1">{title}</h5>}
+        {title && <h2 className="card-title mb-3  h1">{title}</h2>}
 
-        <p className="card-text m-5">{text}</p>
+        <p className="card-text">{text}</p>
       </div>
     </section>
   );
